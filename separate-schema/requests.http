@@ -2,3 +2,15 @@
 GET http://localhost:8080/api/presentations
 Content-Type: application/json
 Tenant: coffee-jug
+
+
+
+### Create presentation
+POST http://localhost:8080/api/presentations
+Content-Type: application/json
+Tenant: coffee-jug
+
+{
+  "name": "Hibernate multitenancy",
+  "description": "Hibernate multitenancy"
+}

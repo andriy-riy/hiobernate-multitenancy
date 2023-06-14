@@ -4,6 +4,8 @@ import com.rio.entity.Presentation;
 import com.rio.service.PresentationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +21,10 @@ public class PresentationController {
   @GetMapping
   public List<Presentation> getAll() {
     return presentationService.getAll();
+  }
+
+  @PostMapping
+  public Presentation create(@RequestBody Presentation presentation) {
+    return presentationService.save(presentation);
   }
 }
