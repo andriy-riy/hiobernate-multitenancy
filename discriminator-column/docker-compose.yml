@@ -1,0 +1,13 @@
+services:
+  mySql:
+    image: mysql:8.0.30
+    environment:
+      MYSQL_DATABASE: presentations-hub
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - databases:/var/lib/mySql
+    ports:
+      - '3309:3306'
+
+volumes:
+  databases:

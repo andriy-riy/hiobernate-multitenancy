@@ -1,0 +1,4 @@
+### Get presentations
+GET http://localhost:8080/api/presentations
+Content-Type: application/json
+Tenant: coffee-jug
