@@ -12,7 +12,7 @@ public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver
   public String resolveCurrentTenantIdentifier() {
     String tenantId = TenantHolder.getCurrentTenant();
     // Allow bootstrapping the EntityManagerFactory, in which case no tenant is needed
-    return Objects.requireNonNullElse(tenantId, "BOOTSTRAP");
+    return Objects.requireNonNullElse(tenantId, "DEFAULT");
   }
 
   @Override
